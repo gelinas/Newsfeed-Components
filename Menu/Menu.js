@@ -59,8 +59,16 @@ function createMenu(array) {
   
   const button = document.querySelector(".menu-button");
   button.addEventListener('click', event => {
-    menu.classList.toggle('menu--open');
-  })
+      menu.classList.toggle('menu--open');
+      // if (menu.style.display === "block" ) {
+      //   menu.style.display = "none";
+      //   menu.style.height = "0";
+      // } else {
+      //   menu.style.display = "block";
+      //   menu.style.transition = "height 2s ease-in-out";
+      //   menu.style.height = "100vh";
+      // }
+  });
   // set event listener
   //expand.addEventListener('click', event => {
   //  article.classList.toggle('article-open');
