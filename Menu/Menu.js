@@ -47,6 +47,8 @@ function createMenu(array) {
 
   // set class names
   menu.classList.add("menu");
+  menu.classList.add("menu--open");
+
 
   // set attributes
 
@@ -56,7 +58,13 @@ function createMenu(array) {
     menuItem.textContent = item;
     list.appendChild(menuItem);
   })
-  
+
+  window.addEventListener('click', event => {
+    if (menu.classList.contains('menu--open')) {
+      //if (menu.classList.toggle('menu--open');
+    }
+  });
+
   const button = document.querySelector(".menu-button");
   button.addEventListener('click', event => {
       menu.classList.toggle('menu--open');
@@ -69,6 +77,8 @@ function createMenu(array) {
       //   menu.style.height = "100vh";
       // }
   });
+
+ 
   // set event listener
   //expand.addEventListener('click', event => {
   //  article.classList.toggle('article-open');
